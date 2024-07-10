@@ -10,6 +10,6 @@ jobs:
       - name: print message
         run: echo "This is my first git hub action"
       - name: Combo execuite
-        run: 
+        run: |
           echo "This is number 1"
           echo "This is number 2"
