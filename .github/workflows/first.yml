@@ -9,3 +9,7 @@ jobs:
         run: echo "Hello World"
       - name: print message
         run: echo "This is my first git hub action"
+      - name: Combo execuite
+        run: 
+          echo "This is number 1"
+          echo "This is number 2
