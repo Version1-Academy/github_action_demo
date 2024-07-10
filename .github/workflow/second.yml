@@ -1,0 +1,12 @@
+name: second workflow demo
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: action/checkout@v4
+      - name: investigate
+        run: |
+          pwd
+          ls -lart
