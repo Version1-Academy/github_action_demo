@@ -1,11 +1,14 @@
 name: third workflow demo
 on: workflow_dispatch
 jobs:
-  nginx-deploy-test:
+  code-checkout:
     runs-on: ubuntu-latest
     steps:
       - name: download code
         uses: actions/checkout@v4
+  nginx-deploy-test:
+    runs-on: ubuntu-latest
+    steps:
       - name: donwload container
         run: |
           docker image pull nginx
