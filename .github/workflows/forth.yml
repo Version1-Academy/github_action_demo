@@ -1,0 +1,10 @@
+name: Forth workflow demo
+on: 
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  show_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output 'github' Context
+        run: echo "${{ toJSON( github ) }}"
