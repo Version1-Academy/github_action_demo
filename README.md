@@ -1,1 +1,2 @@
-Example Heading
+# Example Heading
+# Second Heading
