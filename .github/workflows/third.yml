@@ -1,4 +1,4 @@
-name: second workflow demo
+name: third workflow demo
 on: workflow_dispatch
 jobs:
   nginx-deploy-test:
@@ -9,9 +9,10 @@ jobs:
       - name: donwload container
         run: |
           docker image pull nginx
-          docker image ubuntu-latestdocker container run -d -p 8080:80 nginx-deploy-test:
+          docker image ls
+          docker container run -d -p 8080:80 nginx
       - name: Test Web Deployment
         run: |
-          python3 -c "import request; r=requests.get('http:localhost:8080'); print(r.status_code)"
+          python3 -c "import requests; r=requests.get('http:localhost:8080'); print(r.status_code)"
           curl -s localhost:8080
         
